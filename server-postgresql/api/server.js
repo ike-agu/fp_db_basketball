@@ -8,8 +8,10 @@ server.use(express.json());
 const playerRoutes = require('./controllers/players')
 server.use('/players' , playerRoutes)
 
+const teamRoutes =require('./controllers/teams')
+server.use('/teams', teamRoutes)
 
- const port = process.env.PORT || 5000;
+//  const port = process.env.PORT || 5000;
 
 //root route
 server.get("/", (req, res) => res.send("Hello World from Ikenna !"))

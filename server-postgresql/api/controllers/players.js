@@ -23,4 +23,15 @@ router.get('/:id', async(req, res) => {
   }
 })
 
+//create new player
+
+router.post('/', async(req, res) =>{
+  try{
+    const player = await Player.create(req.body.name, req.body.age, reg.body.salary )
+    res.json(player)
+  } catch (err){
+    res.status(404).json({err})
+  }
+});
+
 module.exports = router;

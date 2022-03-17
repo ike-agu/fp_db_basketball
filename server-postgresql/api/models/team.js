@@ -13,9 +13,8 @@ class Team {
     return new Promise (async (resolve, reject) => {
       try{
         let teamData = await db.query(`SELECT * FROM teams WHERE id =  $1;`, [id]);
-        let playerTeam = new Team (teamData.rows[0]);
-        resolve(playerTeam)
-
+        let team = new Team(teamData.rows[0]);
+        resolve(team)
       } catch (err){
         reject('Team not found')
       }
@@ -27,7 +26,7 @@ class Team {
         try{
           const allPlayers = await db.query(`SELECT * FROM basketBallPlayers; WHERE team_id = $1;`, [this.id]);
           const players = allPlayers.rows.map( d => new Player(d));
-          resolves(players)
+          resolve(players)
         }catch (err){
           reject(" Player's team could not be found")
         }

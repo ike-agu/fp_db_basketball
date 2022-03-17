@@ -31,6 +31,18 @@ class BasketBallPlayer {
     });
   }
 
+  static create (name, age , salary){
+    return new Promise(async (resolve, reject) => {
+      try{
+        let playerData = await db.query(`INSERT INTO dogs (name, age, salary) VALUES ($1, $2) RETURNING *;`, [name,age,salary]);
+        let newPlayer = new BasketBallPlayer(playerData.rows[0]);
+        resolve(newPlayer)
+      } catch (err) {
+        reject('Error creating new player')
+      }
+    })
+  }
+
 
 
 }

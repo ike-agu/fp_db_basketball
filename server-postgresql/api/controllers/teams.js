@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router();
 
 const Team = require('../models/team')
 
@@ -14,10 +14,11 @@ router.get('/:id',async (req, res ) => {
 });
 
 // teams players route
-router.get('/:id/dogs', async (reg, res) => {
+router.get('/:id/basketBallPlayers', async (reg, res) => {
   try{
-    const team = await findById(parseInt(req.params.id))
-    const players = await team.players
+    const team = await Team.findById(parseInt(req.params.id))
+    console.log(team)
+    const players = await team.basketBallPlayers
     console.log(players)
     res.json(players)
   } catch (err) {
