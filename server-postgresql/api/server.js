@@ -5,6 +5,8 @@ const server  = express();
 server.use(cors());
 server.use(express.json());
 
+const playerRoutes = require('./controllers/players')
+server.use('/players' , playerRoutes)
 
 
  const port = process.env.PORT || 5000;
