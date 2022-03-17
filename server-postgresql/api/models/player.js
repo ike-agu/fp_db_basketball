@@ -7,7 +7,7 @@ class BasketBallPlayer {
     this.age = data.age
   }
 
-   static get all() {
+  static get all() {
      return new Promise (async (resolve, reject) => {
         try {
             const allPlayers = await db.query(`SELECT * FROM basketBallPlayers;`)
@@ -20,7 +20,7 @@ class BasketBallPlayer {
   }
 
   static findById(id) {
-    return new promise (async (resolve, reject) => {
+    return new Promise (async (resolve, reject) => {
       try {
         let onePlayer = await db.query(`SELECT * FROM basketBallPlayers WHERE id = $1;`, [id]);
         let player = new BasketBallPlayer(onePlayer.rows[0]);

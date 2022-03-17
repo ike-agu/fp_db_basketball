@@ -14,7 +14,6 @@ router.get('/', async (req, res) => {
 })
 
 // players show route
-
 router.get('/:id', async(req, res) => {
   try{
     const player = await Player.findById(parseInt(req.params.id))
