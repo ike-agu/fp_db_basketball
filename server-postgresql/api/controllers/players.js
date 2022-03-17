@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Player = require('../models/palyer')
+const Player = require('../models/player')
 
 // players index route
 router.get('/', async (req, res) => {
@@ -13,5 +13,15 @@ router.get('/', async (req, res) => {
     }
 })
 
+// players show route
+
+router.get('/:id', async(req, res) => {
+  try{
+    const player = await Player.findById(parseInt(req.params.id))
+    res.json(player)
+  } catch(err) {
+    res.status(404).json({err})
+  }
+})
 
 module.exports = router;
