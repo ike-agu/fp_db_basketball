@@ -13,4 +13,4 @@ CREATE TABLE teams(
   id srial PRIMARY KEY,
   teamName varchar(50) NOT NULL,
   countryName  varchar(50) NOT NULL,
-)
+);
