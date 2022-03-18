@@ -16,7 +16,7 @@ class Team {
         let team = new Team(teamData.rows[0]);
         resolve(team)
       } catch (err){
-        reject('Team not found')
+        reject('Your team was not found')
       }
     });
   }

@@ -24,7 +24,6 @@ router.get('/:id', async(req, res) => {
 })
 
 //create new player
-
 router.post('/', async(req, res) =>{
   try{
     const player = await Player.create(req.body.name, req.body.age, reg.body.salary )
@@ -33,5 +32,29 @@ router.post('/', async(req, res) =>{
     res.status(404).json({err})
   }
 });
+
+// players update route
+router.patch('/:id', async (req, res) => {
+    try {
+        const player = await  Player.findById(parseInt(req.params.id))
+        const updatedPlayer = await player.update(req.body.name, req.body.age,req.body.salary )
+        res.json({player: updatedPlayer})
+    } catch(err) {
+        res.status(500).json({err})
+    }
+})
+
+// delete player route
+router.delete('/:id', async (req, res) => {
+    try {
+        const player = await Player.findById(parseInt(req.params.id))
+        await player.destroy()
+        res.status(204).json('Player deleted')
+    } catch(err) {
+        res.status(500).json({err})
+    }
+})
+
+
 
 module.exports = router;
