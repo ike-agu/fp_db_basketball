@@ -7,5 +7,36 @@
 
 body{
   font-family: 'Kaushan Script', cursive;
-  
+}
+
+#content{
+  width: 60vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button{
+  background-color: rgb(74, 74, 228);
+}
+
+input{
+ background-color: rgb(228, 203, 193);
+}
+button, input {
+  border: none;
+  margin: 10px;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+
+table{
+  width: 100%;
+}
+
+.delete{
+  color: red;
+}
+
+.update{
+  color: green;
 }
