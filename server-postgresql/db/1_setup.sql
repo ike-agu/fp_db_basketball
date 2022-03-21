@@ -4,7 +4,7 @@ CREATE TABLE users(
   id serial PRIMARY KEY,
   username varchar(60) NOT NULL UNIQUE,
   email varchar(100) NOT NULL UNIQUE,
-  password_digest varchar(100)NOT NULL
+  password_digest varchar(100) NOT NULL
   );
 
 DROP TABLE IF EXISTS basketBallPlayers;

@@ -16,6 +16,6 @@ server.use('/teams', teamRoutes)
 //  const port = process.env.PORT || 5000;
 
 //root route
-server.get("/", (req, res) => res.send("Hello World from Ikenna !"))
+server.get("/", (req, res) => res.send("Welcome to ikenna's basketball server "))
 
 module.exports = server;

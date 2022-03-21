@@ -1,18 +1,9 @@
-<<<<<<< HEAD
+
 INSERT INTO users(username, email, password_digest)
 VALUE
     ('ikebobo', 'ikebobo@yahoo.fr', 'tu9ibtoi4tbh2hhuet'),
     ('Ekani', 'ekani2003@yahoo.fr', 'h4hoeuba3r3tbaeu'),
     ('ubong', 'ubong2020@yahoo.fr', 'ahudnthpdohbapbb243');
-
-=======
-INSERT INTO users (username, email, password_digest)
-VALUES
-    ('ikebobo frank', 'ikobobo@yahoo.co.uk', 'tu9ibtoi4tbh2hhuet' ),
-    ('Ekani nina', 'ekanifr@yahoo.fr', 'h4hoeuba3r3tbaeu' ),
-    ('ubon utu ', 'ubong2020@yahoo.fr', 'ahudnthpdohbapbb243' );
->>>>>>> d5e5795 (added model for user and method to get all)
-
 
 INSERT INTO basketBallPlayers(name, age, salary, team_id)
 VALUES
