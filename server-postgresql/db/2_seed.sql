@@ -1,3 +1,11 @@
+INSERT INTO users(username, email, password_digest)
+VALUE
+    ('ikebobo', 'ikebobo@yahoo.fr', 'tu9ibtoi4tbh2hhuet'),
+    ('Ekani', 'ekani2003@yahoo.fr', 'h4hoeuba3r3tbaeu'),
+    ('ubong', 'ubong2020@yahoo.fr', 'ahudnthpdohbapbb243');
+
+
+
 INSERT INTO basketBallPlayers(name, age, salary, team_id)
 VALUES
     ('Michael Jordan', 53 , 10000000, 1 ),

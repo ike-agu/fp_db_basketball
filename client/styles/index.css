@@ -7,6 +7,7 @@
 
 body{
   font-family: 'Kaushan Script', cursive;
+  background-color: rgb(245, 245, 245);
 }
 
 #content{
@@ -16,7 +17,7 @@ body{
 }
 
 button{
-  background-color: rgb(74, 74, 228);
+  background-color: rgb(220, 220, 224);
 }
 
 input{
