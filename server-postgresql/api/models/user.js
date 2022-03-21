@@ -11,11 +11,11 @@ class User{
   static get all(){
     return new Promise(async (res,rej) => {
       try{
-        let result = await db.query('SELECT * FROM users;')
+        let result = await db.query(`SELECT * FROM users;`)
         let users = result.rows.map(r => new User(r))
         res(users)
       }catch (err) {
-        rej('Error retrieving users')
+        rej(`Error retrieving users: ${err}`)
       }
     })
   }

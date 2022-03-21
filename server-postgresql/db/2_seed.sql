@@ -1,6 +1,6 @@
 
 INSERT INTO users(username, email, password_digest)
-VALUE
+VALUES
     ('ikebobo', 'ikebobo@yahoo.fr', 'tu9ibtoi4tbh2hhuet'),
     ('Ekani', 'ekani2003@yahoo.fr', 'h4hoeuba3r3tbaeu'),
     ('ubong', 'ubong2020@yahoo.fr', 'ahudnthpdohbapbb243');
